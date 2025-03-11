@@ -15,7 +15,8 @@ H = HyperH0(A = np.diag([-4929, -4929, -4929]), coil = 340, SpinOp = SpinOp2, Nu
 #H.FreePlotNegative(0, 10, 1)
 H.FreePlot(0, 3000, 1)
 exit()
-
+ 
+ # hmmmm
 
 Hydrogen = 5.58569468
 Ytrium = -0.2748308
