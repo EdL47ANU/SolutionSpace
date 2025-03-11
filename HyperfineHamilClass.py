@@ -36,7 +36,7 @@ class HyperH0:
         #print(self.SpinKron)
 
     def ZaxisHamil(self):
-        self.Zeeman = np.kron(np.einsum('iab,ji,j -> ab', np.conj(self.SpinOp), self.gs, self.coil), np.eye(len(self.NucSpinOp[0]))) * MHzmT + np.kron(np.eye(len(self.SpinOp[0])), np.einsum('iab,ji,j -> ab', self.NucSpinOp, self.gi, self.coil))*MHzmT # Convert from mT to MHz
+        self.Zeeman = np.kron(np.einsum('iab,ji,j -> ab', np.conj(self.SpinOp), self.gs, self.coil), np.eye(len(self.NucSpinOp[0]))) * MHzmT + np.kron(np.eye(len(self.SpinOp[0])), np.einsum('iab,ji,j -> ab', self.NucSpinOp, self.gi, self.coil))*MHzmT/1832 # Convert from mT to MHz
     
     def FibbonachiRotateHamil(self, OrientationVec, Ortho1, Ortho2):
         B = OrientationVec * self.coil
