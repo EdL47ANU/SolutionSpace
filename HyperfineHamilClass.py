@@ -175,12 +175,11 @@ class HyperH0:
         ax2.set_xlabel("B Field (mT) up to Then Pulse Sequence")
         #Colour list = to dimension of Evecs
         colors = ['r', 'g', 'b', 'y']
-        print(len(Evecs), len(PlotB))
-        print(len(Evecs[0]))
-        print(len(Evecs[0][0]))
         Evecs = np.array(Evecs)
         #Extract
         A,B,C,D = Evecs[:,3,0], Evecs[:,3,1], Evecs[:,3,2], Evecs[:,3,3]
+        A,B,C,D = np.abs(A), np.abs(B), np.abs(C), np.abs(D)
+        
         #Plot
         ax2.plot(PlotB, A, color = 'r', label = '|+1/2, +1/2>')
         ax2.plot(PlotB, B, color = 'g', label = '|+1/2, -1/2>')
@@ -232,9 +231,6 @@ class HyperH0:
         ax2.set_xlabel("B Field (mT) up to Then Pulse Sequence")
         #Colour list = to dimension of Evecs
         colors = ['r', 'g', 'b', 'y']
-        print(len(Evecs), len(PlotB))
-        print(len(Evecs[0]))
-        print(len(Evecs[0][0]))
         Evecs = np.array(Evecs)
         #Extract
         A,B,C,D = Evecs[:,3,0], Evecs[:,3,1], Evecs[:,3,2], Evecs[:,3,3]
