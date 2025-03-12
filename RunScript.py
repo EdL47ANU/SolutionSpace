@@ -8,6 +8,9 @@ import pickle
 from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
+# git clone this https://github.com/EdL47ANU/SolutionSpace
+
+
 H = HyperH0(A = np.diag([-5598, -6008, -3180]), coil = 340, SpinOp = SpinOp2, NucSpinOp=SpinOp2, gi=np.diag([1.335, 1.410, 1.693]), gs=np.diag([1.335, 1.410, 1.693]))
 #H = HyperH0(A = np.diag([-4929, -4929, -4929]), coil = 340, SpinOp = SpinOp2, NucSpinOp=SpinOp2, gi=np.diag([1.335, 1.410, 1.693]), gs=np.diag([1.479, 1.479, 1.479]))
 #H = HyperH0(A=np.diag([-10,10,-10]), coil = 340, SpinOp = SpinOp2, NucSpinOp=SpinOp2, gi=np.diag([2,2,2]), gs=np.diag([2,2,2]))
